@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "BIF-SWE1/1.0.0": {
+        "dependencies": {
+          "BIF-SWE1.Interfaces": "1.0.0"
+        },
+        "runtime": {
+          "BIF-SWE1.dll": {}
+        }
+      },
+      "BIF-SWE1.Interfaces/1.0.0": {
+        "runtime": {
+          "BIF-SWE1.Interfaces.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BIF-SWE1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BIF-SWE1.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

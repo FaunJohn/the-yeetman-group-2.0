@@ -1,0 +1,14 @@
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.exe
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.deps.json
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.runtimeconfig.json
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.runtimeconfig.dev.json
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.dll
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.pdb
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.csprojAssemblyReference.cache
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.AssemblyInfoInputs.cache
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.AssemblyInfo.cs
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.dll
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.pdb
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.dll
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\bin\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.pdb
+C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1\obj\Debug\netcoreapp3.0\BIF-SWE1.csproj.CopyComplete
