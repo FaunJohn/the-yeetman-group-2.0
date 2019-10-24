@@ -11,6 +11,8 @@ namespace BIF_SWE1
         {
             Path = path;
             RawUrl = path;
+            Parameter = new Dictionary<string, string>();
+
 
             if (RawUrl == null)
             {
@@ -19,23 +21,20 @@ namespace BIF_SWE1
 
             if (Path != null)
             {
-                string[] temp = Path.Split("&");
-                string[] tempVarTwo = temp[1].Split("?");
+                string[] temp = Path.Split("?");
 
-                Parameter = new Dictionary<string, string>();
-
-                if (temp.Length >= 2)
+                if(temp.Length !=1)
                 {
-                    string[] par = temp[1].Split("=");
-                    Parameter[par[0]] = par[1];
-                    if(tempVarTwo.Length >= 2)
+                    string[] tempVarTwo = temp[1].Split("&");
+
+                    foreach (var x in tempVarTwo)
                     {
-                        string[] parTwo = tempVarTwo[1].Split("=");
-                        Parameter[parTwo[0]] = parTwo[1];
+                        string[] help = x.Split("=");
+                        Parameter[help[0]] = help[1];
                     }
                 }
-            }
 
+            }
         }
 
         public string RawUrl { get; private set; }
