@@ -6,3 +6,11 @@ C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0
 C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.AssemblyInfo.cs
 C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.dll
 C:\Users\bonig\source\repos\BIF-SWE1\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.pdb
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\bin\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.deps.json
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\bin\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.dll
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\bin\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.pdb
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.csprojAssemblyReference.cache
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.AssemblyInfo.cs
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.dll
+C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.pdb

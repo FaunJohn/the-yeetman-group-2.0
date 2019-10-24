@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "Task-BIF-SWE1",
+      "appliesTo": "BIF-SWE1/",
+      "type": "launch"
+    }
+  ]
+}
