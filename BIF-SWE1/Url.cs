@@ -13,7 +13,6 @@ namespace BIF_SWE1
             RawUrl = path;
             Parameter = new Dictionary<string, string>();
 
-
             if (RawUrl == null)
             {
                 RawUrl = "/";
@@ -22,6 +21,7 @@ namespace BIF_SWE1
             if (Path != null)
             {
                 string[] temp = Path.Split("?");
+                Path = temp[0];
 
                 if(temp.Length !=1)
                 {
@@ -31,6 +31,7 @@ namespace BIF_SWE1
                     {
                         string[] help = x.Split("=");
                         Parameter[help[0]] = help[1];
+                        ParameterCount++;
                     }
                 }
 
@@ -43,9 +44,6 @@ namespace BIF_SWE1
 
         public IDictionary<string, string> Parameter { get; private set; }
 
-
-        public int ParameterCount => throw new NotImplementedException();
-
         public string[] Segments => throw new NotImplementedException();
 
         public string FileName => throw new NotImplementedException();
@@ -53,5 +51,7 @@ namespace BIF_SWE1
         public string Extension => throw new NotImplementedException();
 
         public string Fragment => throw new NotImplementedException();
+
+        public int ParameterCount { get; private set; }
     }
 }
