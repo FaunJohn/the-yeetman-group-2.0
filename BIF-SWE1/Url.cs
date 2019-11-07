@@ -20,7 +20,17 @@ namespace BIF_SWE1
 
             if (Path != null)
             {
-                string[] temp = Path.Split("?");
+                if (path.StartsWith("/"))
+                {
+                    string tempPath = path.Substring(1);
+                    Segments = tempPath.Split("/");
+                } else
+                {
+                    Segments = path.Split("/");
+                }
+                
+                string[] fragment = path.Split("#");
+                string[] temp = path.Split("?");
                 Path = temp[0];
 
                 if(temp.Length !=1)
@@ -35,6 +45,12 @@ namespace BIF_SWE1
                     }
                 }
 
+                // Fragment implementation
+                if(fragment.Length != 1)
+                {
+                    Path = fragment[0];
+                    Fragment = fragment[1];
+                }
             }
         }
 
@@ -44,13 +60,13 @@ namespace BIF_SWE1
 
         public IDictionary<string, string> Parameter { get; private set; }
 
-        public string[] Segments => throw new NotImplementedException();
+        public string[] Segments { get; private set; }
 
         public string FileName => throw new NotImplementedException();
 
         public string Extension => throw new NotImplementedException();
 
-        public string Fragment => throw new NotImplementedException();
+        public string Fragment { get; private set; }
 
         public int ParameterCount { get; private set; }
     }
