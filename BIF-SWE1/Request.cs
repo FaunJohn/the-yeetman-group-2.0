@@ -9,6 +9,20 @@ namespace BIF_SWE1.Uebungen
 {
     class Request : IRequest
     {
+        public Request(Stream requestStream)
+        {
+            ReqStreamReader = new StreamReader(requestStream);
+            ProcessRequest();
+        }
+
+        private StreamReader ReqStreamReader { get; }
+        private string[] AllowedMethods { get; } = { "GET", "POST" };
+
+        private void ProcessRequest()
+        {
+            // verdammt Sohn
+        }
+
         public bool IsValid => throw new NotImplementedException();
 
         public string Method => throw new NotImplementedException();
