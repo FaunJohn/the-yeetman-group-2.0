@@ -5246,11 +5246,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\BIF-SWE1.UnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\BIF-SWE1.UnitTests.csproj",
       "projectName": "BIF-SWE1.UnitTests",
-      "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\BIF-SWE1.UnitTests.csproj",
+      "projectPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\BIF-SWE1.UnitTests.csproj",
       "packagesPath": "C:\\Users\\Johannes Bauer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\obj\\",
+      "outputPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5269,11 +5269,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
-              "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj"
+            "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj"
             },
-            "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj": {
-              "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj"
+            "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj": {
+              "projectPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {}
+    "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
+    "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
         "projectName": "BIF-SWE1.Interfaces",
-        "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
+        "projectPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
         "packagesPath": "C:\\Users\\Johannes Bauer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\Johannes Bauer\\Source\\Repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
