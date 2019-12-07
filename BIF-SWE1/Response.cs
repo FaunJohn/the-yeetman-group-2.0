@@ -55,17 +55,22 @@ namespace BIF_SWE1.Uebungen
         }
 
         public string Status { get; set; }
+        
+        /// <summary>
+        /// Server Header Helper is filled with default Server Header
+        /// </summary>
+        private string serverHeaderHelper { get; set; } = "BIF-SWE1-Server";
 
         public string ServerHeader 
         { 
             // to implement
             get 
             {
-                return "x";
+                return serverHeaderHelper;
             }
             set
-            { 
-
+            {
+                serverHeaderHelper = value;
             }
         }
 
@@ -83,22 +88,56 @@ namespace BIF_SWE1.Uebungen
 
         public void Send(Stream network)
         {
-            throw new NotImplementedException();
+            // TODO: rework
+            if (String.IsNullOrEmpty(Content) && !String.IsNullOrEmpty(ContentType))
+                throw new Exception("Expected non-empty body when content-type is set, got empty body.");
+
+            StreamWriter sw = new StreamWriter(network, leaveOpen: true);
+            sw.WriteLine("HTTP/1.1" + ' ' + Status);
+            foreach (var header in Headers)
+            {
+                sw.WriteLine(header.Key + ": " + header.Value);
+            }
+            sw.WriteLine($"Content-Length: {ContentLength}");
+            if (ContentType != null)
+            {
+                sw.WriteLine($"Content-Type: {ContentType}");
+            }
+
+            sw.WriteLine();
+            sw.Write(Content);
+            sw.Flush();
+            sw.Close();
+
         }
+
+        public string Content { get; set; }
 
         public void SetContent(string content)
         {
-            throw new NotImplementedException();
+            // save content?
+            Content = content;
+            ContentLength = Encoding.UTF8.GetByteCount(Content);
         }
 
         public void SetContent(byte[] content)
         {
-            throw new NotImplementedException();
+            Content = content.ToString();
+            ContentLength = Encoding.UTF8.GetByteCount(Content);
         }
 
         public void SetContent(Stream stream)
         {
-            throw new NotImplementedException();
+            StreamReader sr = new StreamReader(stream, Encoding.UTF8);
+
+            string line;
+
+            while ((line = sr.ReadLine()) != null)
+            {
+                    Content += line;
+                    ContentLength += line.Length;
+            }
+            sr.Close();
         }
     }
 }

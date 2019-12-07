@@ -52,6 +52,34 @@ namespace BIF_SWE1.Uebungen
                     }
                 }
             }
+            // get Headers
+            while(!ReqStreamReader.EndOfStream)
+            {
+                string streamLine = ReqStreamReader.ReadLine();
+
+                // split the stringstream and extract all headers
+                string[] headerLine = streamLine.Split(": ");
+
+                if (headerLine.Length == 2)
+                {
+                    switch (headerLine[0].ToLower())
+                    {
+                        case "content-type":
+                            ContentType = headerLine[1];
+                            break;
+                        case "user-agent":
+                            UserAgent = headerLine[1];
+                            break;
+                        case "content-length":
+                            ContentLength = Int16.Parse(headerLine[1]); // convert string to int (short)
+                            break;
+                    }
+                    Headers.Add(headerLine[0].ToLower(), headerLine[1]);
+                }
+                // maybe throw an exception?
+            }
+            ReqStreamReader.Close();
+
         }
 
         public bool IsValid { get; private set; }
