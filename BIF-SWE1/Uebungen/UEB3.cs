@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BIF.SWE1.Interfaces;
+using BIF_SWE1;
+using BIF_SWE1.Uebungen;
 
 namespace Uebungen
 {
@@ -14,12 +16,12 @@ namespace Uebungen
 
         public IRequest GetRequest(System.IO.Stream network)
         {
-            throw new NotImplementedException();
+            return new Request(network);
         }
 
         public IResponse GetResponse()
         {
-            throw new NotImplementedException();
+            return new Response();
         }
 
         public IPlugin GetTestPlugin()
