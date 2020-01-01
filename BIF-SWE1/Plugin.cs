@@ -6,7 +6,7 @@ using BIF.SWE1.Interfaces;
 
 namespace BIF_SWE1.Uebungen
 {
-    class Plugin : IPlugin
+    class testplugin : IPlugin
     {
         public float CanHandle(IRequest req)
         {

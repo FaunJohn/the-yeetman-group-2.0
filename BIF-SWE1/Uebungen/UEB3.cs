@@ -16,7 +16,7 @@ namespace Uebungen
 
         public IRequest GetRequest(System.IO.Stream network)
         {
-            return new Request(network);
+            return new BIF_SWE1.Uebungen.Request(network);
         }
 
         public IResponse GetResponse()
@@ -26,7 +26,9 @@ namespace Uebungen
 
         public IPlugin GetTestPlugin()
         {
-            throw new NotImplementedException();
+            PluginManager pluginManager = new PluginManager();
+            return pluginManager.Plugins.First();
+
         }
     }
 }

@@ -8,7 +8,18 @@ namespace BIF_SWE1.Uebungen
 {
     class PluginManager : IPluginManager
     {
-        public IEnumerable<IPlugin> Plugins => throw new NotImplementedException();
+        // ordered plugins list
+        private List<IPlugin> _plugins = new List<IPlugin>();
+
+        public IEnumerable<IPlugin> Plugins {
+            get { return _plugins; }
+            private set
+            {
+                _plugins = new List<IPlugin>();
+                _plugins.AddRange(value); // add to the end if the list
+            }
+
+        }
 
         public void Add(IPlugin plugin)
         {

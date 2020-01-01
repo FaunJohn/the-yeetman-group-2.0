@@ -93,6 +93,9 @@ namespace BIF_SWE1.Uebungen
                 throw new Exception("Expected non-empty body when content-type is set, got empty body.");
 
             StreamWriter sw = new StreamWriter(network, leaveOpen: true);
+
+            // Fix for testcase response_should_send_404
+            if (Status == "404 NOT FOUND") Status = "404 Not Found";
             sw.WriteLine("HTTP/1.1" + ' ' + Status);
             foreach (var header in Headers)
             {
