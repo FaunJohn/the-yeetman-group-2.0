@@ -43,7 +43,7 @@ namespace BIF_SWE1
 
         private static void Listen()
         {
-            TcpListener listener = new TcpListener(IPAddress.Any, 8081);
+            TcpListener listener = new TcpListener(IPAddress.Any, 8080);
             listener.Start();
             while (true)
             {

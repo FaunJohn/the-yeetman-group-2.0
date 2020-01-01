@@ -35,17 +35,24 @@ namespace BIF_SWE1.Uebungen
 
         public void LoadPluginsFromPath()
         {
-            if(Directory.Exists(PluginPath))
+            try
             {
-                string[] files = Directory.GetFiles(PluginPath, "*.dll");
-                // selectMany() -> create a single sewuence from a sequence in which all of the elements are seperate
-                IEnumerable<IPlugin> allPlugins = files.SelectMany(singlePath =>
+                if (Directory.Exists(PluginPath))
                 {
-                    Assembly assemblyPlugins = LoadPlugin(singlePath);
-                    return CreateAllPlugins(assemblyPlugins);
-                }).ToList();
+                    string[] files = Directory.GetFiles(PluginPath, "*.dll");
+                    // selectMany() -> create a single sewuence from a sequence in which all of the elements are seperate
+                    IEnumerable<IPlugin> allPlugins = files.SelectMany(singlePath =>
+                    {
+                        Assembly assemblyPlugins = LoadPlugin(singlePath);
+                        return CreateAllPlugins(assemblyPlugins);
+                    }).ToList();
 
-                Plugins = allPlugins;
+                    Plugins = allPlugins;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
 

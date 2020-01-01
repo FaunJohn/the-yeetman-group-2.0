@@ -70,7 +70,8 @@ namespace BIF_SWE1.Uebungen
             }
             set
             {
-                serverHeaderHelper = value;
+                serverHeaderHelper = value; 
+                AddHeader("Server", value);
             }
         }
 
