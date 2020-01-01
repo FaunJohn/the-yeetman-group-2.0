@@ -2,9 +2,6 @@
 using System.Linq;
 using BIF.SWE1.Interfaces;
 using BIF_SWE1;
-using System.Collections.Generic;
-using System.Text;
-
 
 namespace TestPlugin
 {

@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Plugin.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="plugins" />
   </ItemGroup>
 
 </Project>

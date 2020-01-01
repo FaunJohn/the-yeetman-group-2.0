@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BIF-SWE1.UnitTests", "BIF-S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BIF-SWE1.Interfaces", "BIF-SWE1.Interfaces\BIF-SWE1.Interfaces.csproj", "{11205709-7061-468F-A274-ED07D5205E50}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestPlugin", "TestPlugin", "{EF71616D-A7F5-4ABE-A5D6-91D3FB5D7D59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestPlugin", "ClassLibrary2\TestPlugin.csproj", "{6C3EDCF2-3844-4784-8A0F-C5C0DE82A85B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +29,10 @@ Global
 		{11205709-7061-468F-A274-ED07D5205E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11205709-7061-468F-A274-ED07D5205E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11205709-7061-468F-A274-ED07D5205E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C3EDCF2-3844-4784-8A0F-C5C0DE82A85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C3EDCF2-3844-4784-8A0F-C5C0DE82A85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C3EDCF2-3844-4784-8A0F-C5C0DE82A85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C3EDCF2-3844-4784-8A0F-C5C0DE82A85B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

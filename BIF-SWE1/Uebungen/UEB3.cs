@@ -27,7 +27,7 @@ namespace Uebungen
         public IPlugin GetTestPlugin()
         {
             PluginManager pluginManager = new PluginManager();
-            return pluginManager.Plugins.First();
+            return pluginManager.GetPluginFromPath("TestPlugin");
 
         }
     }

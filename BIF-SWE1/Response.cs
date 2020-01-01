@@ -7,7 +7,7 @@ using BIF.SWE1.Interfaces;
 
 namespace BIF_SWE1.Uebungen
 {
-    class Response : IResponse
+    public class Response : IResponse
     {
         public IDictionary<string, string> Headers { get; } = new Dictionary<string, string>();
 
