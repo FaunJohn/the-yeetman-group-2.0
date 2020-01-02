@@ -13,3 +13,4 @@ C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Inter
 C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.AssemblyInfo.cs
 C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.dll
 C:\Users\Johannes Bauer\Source\Repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.pdb
+C:\Users\Johannes Bauer\source\repos\FaunJohn\the-yeetman-group-2\BIF-SWE1.Interfaces\obj\Debug\netcoreapp3.0\BIF-SWE1.Interfaces.csprojAssemblyReference.cache

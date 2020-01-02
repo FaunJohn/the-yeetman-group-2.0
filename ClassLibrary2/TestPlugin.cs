@@ -5,6 +5,7 @@ using BIF_SWE1;
 
 namespace TestPlugin
 {
+    // Todo: Rework?
     public class TestPlugin : IPlugin, IPluginName
     {
         public string Name { get; } = "TestPlugin";

@@ -112,26 +112,29 @@ namespace BIF_SWE1.Uebungen
             sw.Write(Content);
             sw.Flush();
             sw.Close();
-
         }
 
         public string Content { get; set; }
 
+        public byte[] byteContent { get; set; }
+
         public void SetContent(string content)
         {
-            // save content?
             Content = content;
-            ContentLength = Encoding.UTF8.GetByteCount(Content);
+            byteContent = Encoding.UTF8.GetBytes(Content);
+            ContentLength = byteContent.Length;
         }
 
         public void SetContent(byte[] content)
         {
-            Content = content.ToString();
-            ContentLength = Encoding.UTF8.GetByteCount(Content);
+            Content = Encoding.UTF8.GetString(content);
+            byteContent = content;
+            ContentLength = content.Length;
         }
 
         public void SetContent(Stream stream)
         {
+            /* OLD IMPLEMENTATION
             StreamReader sr = new StreamReader(stream, Encoding.UTF8);
 
             string line;
@@ -142,6 +145,11 @@ namespace BIF_SWE1.Uebungen
                     ContentLength += line.Length;
             }
             sr.Close();
+            */
+
+            var ms = new MemoryStream();
+            stream.CopyTo(ms);
+            SetContent(ms.ToArray());
         }
     }
 }

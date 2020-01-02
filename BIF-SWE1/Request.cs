@@ -57,6 +57,18 @@ namespace BIF_SWE1.Uebungen
             {
                 string streamLine = ReqStreamReader.ReadLine();
 
+                // when the header is empty -> content will be read
+                if (streamLine == "")
+                {
+                    // break if there is no content
+                    if (ContentLength == 0) break;
+
+                    var charContent = new char[ContentLength];
+                    ReqStreamReader.Read(charContent, 0, ContentLength);
+                    Content = new string(charContent);
+                    break;
+                }
+
                 // split the stringstream and extract all headers
                 string[] headerLine = streamLine.Split(": ");
 
@@ -98,10 +110,27 @@ namespace BIF_SWE1.Uebungen
 
         public string ContentType { get; private set; }
 
-        public Stream ContentStream => throw new NotImplementedException();
+        private string Content { get; set; } = "";
 
-        public string ContentString => throw new NotImplementedException();
+        public Stream ContentStream
+        {
+            get
+            {
+                MemoryStream ms = new MemoryStream();
+                StreamWriter sw = new StreamWriter(ms, Encoding.ASCII);
 
-        public byte[] ContentBytes => throw new NotImplementedException();
+                sw.Write(Content);
+
+                sw.Flush();
+
+                ms.Seek(0, SeekOrigin.Begin);
+                return ms;
+            }
+        }
+        
+
+        public string ContentString => Content;
+
+        public byte[] ContentBytes => Encoding.UTF8.GetBytes(Content);
     }
 }
