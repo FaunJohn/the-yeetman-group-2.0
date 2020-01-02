@@ -19,6 +19,12 @@ namespace BIF_SWE1.Uebungen
             { 500, "500 INTERNAL SERVER ERROR"}, { 404, "404 NOT FOUND"}, { 200, "200 OK"}
         };
 
+        public IDictionary<string, string> KnownFileExtensions = new Dictionary<string, string>()
+        {
+            {"html", "text/html"}, {"css", "text/css"}, {"", "text/plain"}, {"js", "text/javascript"}, 
+            {"gif", "image/gif"}, {"jpeg", "image/jpeg"}, {"jpg", "image/jpeg"}, {"png", "image/png"}
+        };
+
         public int ContentLength  { get; private set; }
 
         public string ContentType { get; set; }

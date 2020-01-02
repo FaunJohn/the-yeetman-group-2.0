@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BIF.SWE1.Interfaces;
+using BIF_SWE1;
 using BIF_SWE1.Uebungen;
 
 namespace Uebungen
 {
     public class UEB5
     {
+        private string StaticFileFolder;
+
+
         public void HelloWorld()
         {
         }
@@ -25,17 +29,19 @@ namespace Uebungen
 
         public IPlugin GetStaticFilePlugin()
         {
-            throw new NotImplementedException();
+            PluginManager pm = new PluginManager();
+            return pm.GetPluginFromPath("StaticFilePlugin");
         }
 
         public string GetStaticFileUrl(string fileName)
         {
-            throw new NotImplementedException();
+            return new Url(fileName).RawUrl;
         }
 
         public void SetStatiFileFolder(string folder)
         {
-            throw new NotImplementedException();
+            // do something?
+            StaticFileFolder = folder;
         }
     }
 }

@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.0": {}
+    ".NETCoreApp,Version=v3.0": {
+      "BIF-SWE1/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "dependencies": {
+          "BIF-SWE1.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BIF-SWE1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BIF-SWE1.dll": {}
+        }
+      },
+      "BIF-SWE1.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.0",
+        "compile": {
+          "bin/placeholder/BIF-SWE1.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BIF-SWE1.Interfaces.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BIF-SWE1/1.0.0": {
+      "type": "project",
+      "path": "../BIF-SWE1/BIF-SWE1.csproj",
+      "msbuildProject": "../BIF-SWE1/BIF-SWE1.csproj"
+    },
+    "BIF-SWE1.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../BIF-SWE1.Interfaces/BIF-SWE1.Interfaces.csproj",
+      "msbuildProject": "../BIF-SWE1.Interfaces/BIF-SWE1.Interfaces.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.0": []
+    ".NETCoreApp,Version=v3.0": [
+      "BIF-SWE1 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Johannes Bauer\\.nuget\\packages\\": {},
@@ -36,7 +73,11 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj": {
+              "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

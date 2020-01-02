@@ -5,6 +5,7 @@ using System.Text;
 using System.Net.Sockets;
 using System.IO;
 using System.Net;
+using BIF_SWE1.Uebungen;
 
 namespace BIF_SWE1
 {
@@ -12,8 +13,14 @@ namespace BIF_SWE1
     {
         static void Main(string[] args)
         {
+            PluginManager pm = new PluginManager();
+            Console.WriteLine("Loading TestPlugin...");
+            pm.GetPluginFromPath("TestPlugin");
+            Console.WriteLine("Loading StaticFilePlugin...");
+            pm.GetPluginFromPath("StaticFilePlugin");
+
             //Read();
-            Listen();
+            //Listen();
         }
 
         public static void Read()

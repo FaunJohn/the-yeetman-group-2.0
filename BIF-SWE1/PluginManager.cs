@@ -62,11 +62,13 @@ namespace BIF_SWE1.Uebungen
             string pluginPath = PluginPath + "/" + pluginName + ".dll";
             // create assembly for plugin
             Assembly pluginAssembly = LoadPlugin(pluginPath);
+            Console.WriteLine(pluginPath);
+            Console.WriteLine(pluginAssembly);
 
             if(pluginAssembly != null)
             {
                 List<IPlugin> assemblyPlugins = CreateAllPlugins(pluginAssembly).ToList();
-                return assemblyPlugins.First();
+                return assemblyPlugins.First(); // OrDefault(); -> exceptions: do not return null!
             } 
             else
             {
@@ -82,10 +84,12 @@ namespace BIF_SWE1.Uebungen
             // check if file is available/exists
             if(File.Exists(pluginPath))
             {
+                Console.WriteLine("File exists!");
                 return loadContext.LoadFromAssemblyName(new AssemblyName(Path.GetFileNameWithoutExtension(pluginPath)));
             } 
             else
             {
+                Console.WriteLine("File does not exist!");
                 return null;
             }
         }
@@ -95,16 +99,30 @@ namespace BIF_SWE1.Uebungen
             // getTypes() returns all types which are defines in this assembly
             foreach (Type type in pluginAssembly.GetTypes())
             {
+                Console.WriteLine("1");
+                Console.WriteLine(pluginAssembly);
+                Console.WriteLine("type -> " + typeof(IPlugin));
+                Console.WriteLine("assign to");
+                Console.WriteLine("type -> " + type);
+                Console.WriteLine(typeof(IPlugin).IsAssignableFrom(type));
                 // IsAssignableFrom() -> Determines whether an instance of a specified type can be assigned to a variable of the current type.
                 if (typeof(IPlugin).IsAssignableFrom(type))
                 {
+                    Console.WriteLine("2");
                     // Creates an instance of the specified type using the constructor that best matches the specified parameters.
                     // is tests if the expression can be converted to the specified type and casts it to "result"
                     if (Activator.CreateInstance(type) is IPlugin result)
                     {
+                        Console.WriteLine("3");
+                        Console.WriteLine(result);
                         // You use a yield return statement to return each element one at a time
                         yield return result;
                     }
+                }
+                else
+                {
+                    Console.WriteLine("error!");
+                    yield return null;
                 }
             }
         }
@@ -116,6 +134,7 @@ namespace BIF_SWE1.Uebungen
 
         public void Add(string plugin)
         {
+            Console.WriteLine("ADD: " + plugin);
             var type = Type.GetType(plugin);
             var instance = (IPlugin)Activator.CreateInstance(type);
             Add(instance);
