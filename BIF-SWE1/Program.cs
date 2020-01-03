@@ -7,22 +7,23 @@ using System.IO;
 using System.Net;
 using BIF_SWE1.Uebungen;
 
+
 namespace BIF_SWE1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            PluginManager pm = new PluginManager();
-            Console.WriteLine("Loading TestPlugin...");
-            pm.GetPluginFromPath("TestPlugin");
-            Console.WriteLine("Loading StaticFilePlugin...");
-            pm.GetPluginFromPath("StaticFilePlugin");
-
-            //Read();
-            //Listen();
+            Server server = new Server();
+            server.Listen();
         }
 
+
+
+
+
+
+        /*
         public static void Read()
         {
             TcpClient s = new TcpClient();
@@ -77,5 +78,6 @@ namespace BIF_SWE1
                 s.Close();
             }
         }
+        */
     }
 }

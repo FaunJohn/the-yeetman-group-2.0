@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\NaviPlugin\\NaviPlugin.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
+        "projectName": "BIF-SWE1.Interfaces",
+        "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\Johannes Bauer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johannes Bauer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj",
+        "projectName": "BIF-SWE1",
+        "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj",
+        "packagesPath": "C:\\Users\\Johannes Bauer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johannes Bauer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1.Interfaces\\BIF-SWE1.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\NaviPlugin\\NaviPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\NaviPlugin\\NaviPlugin.csproj",
+        "projectName": "NaviPlugin",
+        "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\NaviPlugin\\NaviPlugin.csproj",
+        "packagesPath": "C:\\Users\\Johannes Bauer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\NaviPlugin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Johannes Bauer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {
+              "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj": {
+                "projectPath": "C:\\Users\\Johannes Bauer\\source\\repos\\FaunJohn\\the-yeetman-group-2\\BIF-SWE1\\BIF-SWE1.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

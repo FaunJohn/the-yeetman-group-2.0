@@ -22,7 +22,7 @@ namespace BIF_SWE1.Uebungen
         public IDictionary<string, string> KnownFileExtensions = new Dictionary<string, string>()
         {
             {"html", "text/html"}, {"css", "text/css"}, {"", "text/plain"}, {"js", "text/javascript"}, 
-            {"gif", "image/gif"}, {"jpeg", "image/jpeg"}, {"jpg", "image/jpeg"}, {"png", "image/png"}
+            {"gif", "image/gif"}, {"jpeg", "image/jpeg"}, {"jpg", "image/jpeg"}, {"png", "image/png"}, {"txt", "text/plain"},
         };
 
         public int ContentLength  { get; private set; }
