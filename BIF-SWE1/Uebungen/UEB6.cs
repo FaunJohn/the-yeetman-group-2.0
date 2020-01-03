@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BIF.SWE1.Interfaces;
+using BIF_SWE1.Uebungen;
 
 namespace Uebungen
 {
@@ -14,12 +15,12 @@ namespace Uebungen
 
         public IPluginManager GetPluginManager()
         {
-            throw new NotImplementedException();
+            return new PluginManager();
         }
 
         public IRequest GetRequest(System.IO.Stream network)
         {
-            throw new NotImplementedException();
+            return new Request(network);
         }
 
         public string GetNaviUrl()
@@ -49,12 +50,13 @@ namespace Uebungen
 
         public IPlugin GetToLowerPlugin()
         {
-            throw new NotImplementedException();
+            PluginManager pluginManager = new PluginManager();
+            return pluginManager.GetPluginFromPath("ToLowerPlugin");
         }
 
         public string GetToLowerUrl()
         {
-            throw new NotImplementedException();
+            return "/tolower.html";
         }
     }
 }

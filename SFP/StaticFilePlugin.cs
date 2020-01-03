@@ -27,9 +27,14 @@ namespace SFP
         {
             string filePath = request.Url.Path;
             Response response = new Response();
-
+            
+            if(request.Url.RawUrl == "/")
+            {
+                filePath = "index.html";
+            }
             if (File.Exists("./static-files/" + filePath))
             {
+                Console.WriteLine("./static-files/" + filePath);
                 response.StatusCode = 200;
                 response.SetContent(File.OpenRead("./static-files/" + filePath));
                 string fileExtension = Path.GetExtension("./static-files/" + filePath).Trim('.');

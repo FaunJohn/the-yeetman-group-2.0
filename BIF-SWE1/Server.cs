@@ -40,10 +40,10 @@ namespace BIF_SWE1
             float maxScore = 0.0f;
             string message = "";
 
-            foreach(var plugin in PluginManager.Plugins)
+            foreach (var plugin in PluginManager.Plugins)
             {
                 var score = plugin.CanHandle(request);
-                if(score > maxScore)
+                if (score > maxScore)
                 {
                     maxScore = score;
                     selectedPlugin = plugin;

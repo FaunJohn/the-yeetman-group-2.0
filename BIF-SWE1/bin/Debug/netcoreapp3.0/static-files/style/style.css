@@ -1,0 +1,24 @@
+body {
+    margin: auto;
+    width: 66%;
+} 
+
+.temp-header {
+    margin-top: 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.temp-table-wrapper {
+}
+
+.col {
+    width: 33%;
+}
+
+.content-wrapper {
+    padding: 2rem;
+}

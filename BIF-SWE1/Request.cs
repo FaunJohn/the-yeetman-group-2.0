@@ -12,7 +12,7 @@ namespace BIF_SWE1.Uebungen
     {
         public Request(Stream requestStream)
         {
-            ReqStreamReader = new StreamReader(requestStream);
+            ReqStreamReader = new StreamReader(requestStream, leaveOpen: true);
             ProcessRequest();
         }
 
@@ -90,6 +90,7 @@ namespace BIF_SWE1.Uebungen
                 }
                 // maybe throw an exception?
             }
+            // stream not writable?
             ReqStreamReader.Close();
 
         }

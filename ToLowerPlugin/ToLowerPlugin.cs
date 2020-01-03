@@ -24,7 +24,29 @@ namespace ToLowerPlugin
         }
         public IResponse Handle(IRequest req)
         {
-            return null;
+            if (req == null)
+            {
+                return new Response { StatusCode = 404 };
+            }
+
+            if(req.IsValid && req.ContentString == "text=")
+            {
+                Response response = new Response { StatusCode = 200 };
+                response.SetContent("Bitte geben Sie einen Text ein");
+                return response;
+            }
+
+            // returns lower case request content string
+            else if (req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "tolower.html" && req.Method == "POST")
+            {
+                Response response = new Response { StatusCode = 200 };
+                response.SetContent(req.ContentString.ToLower());
+                return response;
+            }
+            else
+            {
+                return new Response { StatusCode = 404 };
+            }
         }
 
 
