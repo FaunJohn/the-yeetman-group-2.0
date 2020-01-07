@@ -8,8 +8,16 @@ using BIF.SWE1.Interfaces;
 
 namespace BIF_SWE1.Uebungen
 {
+    /// <summary>
+    /// Manages requests, one at a time.
+    /// The class parses information from the request stream.
+    /// </summary>
     class Request : IRequest
     {
+        /// <summary>
+        /// Reads the content of an input stream and calls the ProcessRequest function
+        /// </summary>
+        /// <param name="requestStream">Content Stream to read from</param>
         public Request(Stream requestStream)
         {
             ReqStreamReader = new StreamReader(requestStream, leaveOpen: true);
@@ -18,8 +26,14 @@ namespace BIF_SWE1.Uebungen
 
         private StreamReader ReqStreamReader { get; }
 
+        /// <summary>
+        /// List of allowed HTTP methods for the server to process
+        /// </summary>
         private string[] AllowedMethods { get; } = { "GET", "POST" };
 
+        /// <summary>
+        /// Parses the request stream content and saves its information
+        /// </summary>
         private void ProcessRequest()
         {
             string requestLine;
@@ -95,24 +109,51 @@ namespace BIF_SWE1.Uebungen
 
         }
 
+        /// <summary>
+        /// States if a Request is valid. If the method url can be parsed the request is valid.
+        /// </summary>
         public bool IsValid { get; private set; }
 
+        /// <summary>
+        /// Returns the requested method (UPPERCASE -> GET or POST)
+        /// </summary>
         public string Method { get; private set; }
 
+        /// <summary>
+        /// Returns URL object of the request
+        /// </summary>
         public IUrl Url { get; private set; }
 
+        /// <summary>
+        /// Returns the requested header
+        /// </summary>
         public IDictionary<string, string> Headers { get; private set; } = new Dictionary<string, string>();
 
+        /// <summary>
+        /// Returns the requested UserAgent
+        /// </summary>
         public string UserAgent { get; private set; }
 
+        /// <summary>
+        /// Returns the HeaderCount, can be 0 if the header is not found
+        /// </summary>
         public int HeaderCount => Headers.Count;
 
+        /// <summary>
+        /// Returns the parsed ContentLength request header.
+        /// </summary>
         public int ContentLength { get; private set; }
 
+        /// <summary>
+        /// Returns the parsed ContentType request header.
+        /// </summary>
         public string ContentType { get; private set; }
 
         private string Content { get; set; } = "";
 
+        /// <summary>
+        /// Returns the content stream of the request
+        /// </summary>
         public Stream ContentStream
         {
             get
@@ -129,9 +170,14 @@ namespace BIF_SWE1.Uebungen
             }
         }
         
-
+        /// <summary>
+        /// Returns the content of the request as a string
+        /// </summary>
         public string ContentString => Content;
 
+        /// <summary>
+        /// Returns the content of the request as bytes
+        /// </summary>
         public byte[] ContentBytes => Encoding.UTF8.GetBytes(Content);
     }
 }

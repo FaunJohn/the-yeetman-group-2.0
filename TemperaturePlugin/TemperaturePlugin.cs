@@ -14,7 +14,7 @@ namespace TemperaturePlugin
             if (req == null)
                 return 0.0f;
 
-            if (req.IsValid && req.Url.Segments[0].ToLower().Contains("tolower"))
+            if (req.IsValid && req.Url.Segments[0].ToLower().Contains("temperature"))
             {
                 return 1.0f;
             }

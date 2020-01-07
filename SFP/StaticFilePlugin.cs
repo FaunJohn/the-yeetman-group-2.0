@@ -8,8 +8,16 @@ namespace SFP
 {
     public class StaticFilePlugin : IPlugin, IPluginName
     {
+        /// <summary>
+        /// A plugin for loading static files from the webserver
+        /// </summary>
         public string Name { get; } = "StaticFilePlugin";
 
+        /// <summary>
+        /// Checks if the given Plugin can handle a request
+        /// </summary>
+        /// <param name="req">Given request</param>
+        /// <returns>Float</returns>
         public float CanHandle(IRequest req)
         {
             if (req == null)
@@ -23,6 +31,11 @@ namespace SFP
             return 0.0f;
         }
 
+        /// <summary>
+        /// Handles the request, returns the static file
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns>Valid response with response code...</returns>
         public IResponse Handle(IRequest request)
         {
             string filePath = request.Url.Path;

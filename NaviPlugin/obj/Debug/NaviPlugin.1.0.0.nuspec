@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NaviPlugin</id>
+    <version>1.0.0</version>
+    <authors>NaviPlugin</authors>
+    <owners>NaviPlugin</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0">
+        <dependency id="BIF-SWE1" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Johannes Bauer\source\repos\FaunJohn\the-yeetman-group-2\NaviPlugin\bin\Debug\netcoreapp3.0\NaviPlugin.dll" target="lib\netcoreapp3.0\NaviPlugin.dll" />
+  </files>
+</package>

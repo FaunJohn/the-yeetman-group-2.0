@@ -9,11 +9,17 @@ using BIF.SWE1.Interfaces;
 
 namespace BIF_SWE1.Uebungen
 {
+    /// <summary>
+    /// Manages all Plugins for the webserver
+    /// </summary>
     class PluginManager : IPluginManager
     {
         // ordered plugins list
         private List<IPlugin> _plugins = new List<IPlugin>();
 
+        /// <summary>
+        /// Contains all plugins
+        /// </summary>
         public IEnumerable<IPlugin> Plugins {
             get { return _plugins; }
             private set
@@ -26,13 +32,20 @@ namespace BIF_SWE1.Uebungen
 
         private string PluginPath { get; set; }
 
-        // TODO:
+        /// <summary>
+        /// Initializes the plugin manager with a path to locate the plugins
+        /// </summary>
+        /// <param name="pluginPath">Plugin path, default: ./plugins</param>
         public PluginManager(string pluginPath = "./plugins")
         {
             PluginPath = pluginPath;
             LoadPluginsFromPath();
         }
 
+        /// <summary>
+        /// Looks for all .ll files in the specified directory (./plugins) that implement IPlugin
+        /// and adds them to the Plugin List
+        /// </summary>
         public void LoadPluginsFromPath()
         {
             try
@@ -56,6 +69,12 @@ namespace BIF_SWE1.Uebungen
             }
         }
 
+        /// <summary>
+        /// Searches for a plugin with the specified name an loads the types which implement the Plugin (IPlugin) and returns the first one
+        /// The assembly should  only contain one specific Plugin
+        /// </summary>
+        /// <param name="pluginName">Name of the Plugin/Assembly</param>
+        /// <returns>First Plugin found in the assembly or null</returns>
         public IPlugin GetPluginFromPath(string pluginName)
         {
             // create plugin path string
@@ -74,7 +93,11 @@ namespace BIF_SWE1.Uebungen
             }
         }
 
-        // load existing plugin assembly
+        /// <summary>
+        /// Load existing plugin assembly
+        /// </summary>
+        /// <param name="pluginPath">Path for loading the plugin assembly</param>
+        /// <returns>Assembly or null</returns>
         static Assembly LoadPlugin(string pluginPath)
         {
             PluginLoadContext loadContext = new PluginLoadContext(pluginPath);
@@ -90,6 +113,11 @@ namespace BIF_SWE1.Uebungen
             }
         }
 
+        /// <summary>
+        /// Creates Instances of all types that implement IPlugin in the assembly
+        /// </summary>
+        /// <param name="pluginAssembly">Assemly which contains Plugins to implement</param>
+        /// <returns>Enumerable of plugins</returns>
         static IEnumerable<IPlugin> CreateAllPlugins(Assembly pluginAssembly)
         {
             // getTypes() returns all types which are defines in this assembly
@@ -109,11 +137,19 @@ namespace BIF_SWE1.Uebungen
             }
         }
 
+        /// <summary>
+        /// Adds a plugin to the Plugin List
+        /// </summary>
+        /// <param name="plugin">Plugin that should be added</param>
         public void Add(IPlugin plugin)
         {
             _plugins.Add(plugin);
         }
 
+        /// <summary>
+        /// Creates an instance of the specified Plugin and adds it to the Plugin List
+        /// </summary>
+        /// <param name="plugin">Plugin name (string)</param>
         public void Add(string plugin)
         {
             var type = Type.GetType(plugin);
@@ -121,6 +157,9 @@ namespace BIF_SWE1.Uebungen
             Add(instance);
         }
 
+        /// <summary>
+        /// Clears plugin list
+        /// </summary>
         public void Clear()
         {
             Plugins = new List<IPlugin>();

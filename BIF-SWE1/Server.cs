@@ -10,12 +10,24 @@ using System.Threading;
 
 namespace BIF_SWE1
 {
+    /// <summary>
+    /// Manager for the connection of the webserver
+    /// Initializes plugins
+    /// Processes request
+    /// Uses multiple Threads for plugins and requests
+    /// </summary>
     class Server
     {
+        /// <summary>
+        /// Static Port of the server
+        /// </summary>
         public int Port = 8080;
 
         private PluginManager PluginManager { get; set; } = new PluginManager();
 
+        /// <summary>
+        /// Listens for requests on the specified Port and processes requests with threads
+        /// </summary>
         public void Listen()
         {
             Console.WriteLine("Starting Server...");
@@ -31,6 +43,10 @@ namespace BIF_SWE1
             }
         }
 
+        /// <summary>
+        /// Processes a request with the client connected to a specific socket
+        /// </summary>
+        /// <param name="s">Socket for communication with client to process</param>
         private void ProcessRequest(Socket s)
         {
             Stream stream = new NetworkStream(s);

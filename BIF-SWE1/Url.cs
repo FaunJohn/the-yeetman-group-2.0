@@ -5,8 +5,16 @@ using BIF.SWE1.Interfaces;
 
 namespace BIF_SWE1
 {
+    /// <summary>
+    /// Parses URL information and provides information.
+    /// </summary>
     class Url : IUrl
     {
+        /// <summary>
+        /// Pocesses the path
+        /// Provides Information about the url
+        /// </summary>
+        /// <param name="path">Path name</param>
         public Url(string path)
         {
             Path = path;
@@ -54,20 +62,45 @@ namespace BIF_SWE1
             }
         }
 
+        /// <summary>
+        /// Retunrs Raw URL
+        /// </summary>
         public string RawUrl { get; private set; }
 
+        /// <summary>
+        /// Returns Path as string
+        /// </summary>
         public string Path { get; private set; }
 
+        /// <summary>
+        /// Returns a dictionary with url parameters
+        /// </summary>
         public IDictionary<string, string> Parameter { get; private set; }
 
+        /// <summary>
+        /// Returns the segments of an url path
+        /// </summary>
         public string[] Segments { get; private set; }
 
-        public string FileName => throw new NotImplementedException();
+        /// <summary>
+        /// Returns the filename as string
+        /// </summary>
+        public string FileName { get; }
 
-        public string Extension => throw new NotImplementedException();
+        /// <summary>
+        /// returns the file extension
+        /// </summary>
+        public string Extension { get; }
 
+        /// <summary>
+        /// Returns an url fragment as string
+        /// Fragment: Part after # at the end of the url
+        /// </summary>
         public string Fragment { get; private set; }
 
+        /// <summary>
+        /// Returns the Count of Parameters as int
+        /// </summary>
         public int ParameterCount { get; private set; }
     }
 }

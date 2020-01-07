@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['add_139',['Add',['../class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#a4e4a691081a4f6e57d984504fa5b2f9b',1,'BIF_SWE1.Uebungen.PluginManager.Add(IPlugin plugin)'],['../class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#a910e16d11ba26c9799d63302a2c8c7fc',1,'BIF_SWE1.Uebungen.PluginManager.Add(string plugin)'],['../interface_b_i_f_1_1_s_w_e1_1_1_interfaces_1_1_i_plugin_manager.html#aafdf8fe933ffb358d7bdd714a79bd0c7',1,'BIF.SWE1.Interfaces.IPluginManager.Add(IPlugin plugin)'],['../interface_b_i_f_1_1_s_w_e1_1_1_interfaces_1_1_i_plugin_manager.html#a5ed3f69341929b717ca890e2d41dbdf2',1,'BIF.SWE1.Interfaces.IPluginManager.Add(string plugin)']]],
+  ['addheader_140',['AddHeader',['../class_b_i_f___s_w_e1_1_1_uebungen_1_1_response.html#a79d62b15d0b379542366a730573a3247',1,'BIF_SWE1.Uebungen.Response.AddHeader()'],['../interface_b_i_f_1_1_s_w_e1_1_1_interfaces_1_1_i_response.html#a21658427220ef19145fe93cd88f8f033',1,'BIF.SWE1.Interfaces.IResponse.AddHeader()']]]
+];

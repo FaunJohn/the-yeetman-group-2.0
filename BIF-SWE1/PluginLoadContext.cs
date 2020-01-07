@@ -6,15 +6,27 @@ using System.Runtime.Loader;
 
 namespace BIF_SWE1
 {
+    /// <summary>
+    /// Extends The Assembly Load Context with plugin specific Code
+    /// </summary>
     class PluginLoadContext : AssemblyLoadContext
     {
         private AssemblyDependencyResolver _resolver;
 
+        /// <summary>
+        /// Setup the AssemblyDependencyResolver
+        /// </summary>
+        /// <param name="pluginPath">Given Plugin Path</param>
         public PluginLoadContext(string pluginPath)
         {
             _resolver = new AssemblyDependencyResolver(pluginPath);
         }
 
+        /// <summary>
+        /// Load the assembly contents
+        /// </summary>
+        /// <param name="assemblyName">Unique identifier of an assembly</param>
+        /// <returns>Assembly of type Assembly</returns>
         protected override Assembly Load(AssemblyName assemblyName)
         {
             string assemblyPath = _resolver.ResolveAssemblyToPath(assemblyName);
