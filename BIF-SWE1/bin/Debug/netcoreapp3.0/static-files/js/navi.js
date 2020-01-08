@@ -7,11 +7,8 @@ class NaviManager {
   output = document.getElementById("navi-output");
 
   unavailableResponse = `
-    <div class="text-warning navi-warning-output-wrapper">
-        <i class="material-icons navi-warning-output-icon">
-        warning
-        </i>
-        Server busy
+    <div class="navi-warning-output-wrapper">
+        Warning! Server is busy!
     </div>
     `;
 

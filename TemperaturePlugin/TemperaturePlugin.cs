@@ -14,7 +14,7 @@ namespace TemperaturePlugin
             if (req == null)
                 return 0.0f;
 
-            if (req.IsValid && req.Url.Segments[0].ToLower().Contains("temperature"))
+            if (req.IsValid && req.Url.Segments[0].ToLower().Contains("temperature") || (req.IsValid && req.Url.Segments[0].ToLower() == "navi.html"))
             {
                 return 1.0f;
             }

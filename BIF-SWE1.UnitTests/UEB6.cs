@@ -166,7 +166,7 @@ namespace BIF.SWE1.UnitTests
         public void navi_plugin_handle()
         {
             var ueb = CreateInstance();
-            var plugin = ueb.GetNavigationPlugin();
+            var plugin = ueb.GetNavigationPluginWithoutLoadingMap();
             Assert.That(plugin, Is.Not.Null, "IUEB6.GetNavigationPlugin returned null");
 
             var url = ueb.GetNaviUrl();
@@ -187,7 +187,7 @@ namespace BIF.SWE1.UnitTests
         public void navi_plugin_contains_summary()
         {
             var ueb = CreateInstance();
-            var plugin = ueb.GetNavigationPlugin();
+            var plugin = ueb.GetNavigationPluginWithoutLoadingMap();
             Assert.That(plugin, Is.Not.Null, "IUEB6.GetNavigationPlugin returned null");
 
             var url = ueb.GetNaviUrl();
@@ -211,7 +211,7 @@ namespace BIF.SWE1.UnitTests
         public void navi_plugin_handle_empty()
         {
             var ueb = CreateInstance();
-            var plugin = ueb.GetNavigationPlugin();
+            var plugin = ueb.GetNavigationPluginWithoutLoadingMap();
             Assert.That(plugin, Is.Not.Null, "IUEB6.GetNavigationPlugin returned null");
 
             var url = ueb.GetNaviUrl();

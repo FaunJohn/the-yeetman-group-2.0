@@ -63,5 +63,22 @@ namespace Uebungen
             return new Url(fileName).RawUrl;
         }
 
+        public IPlugin GetNavigationPluginWithoutLoadingMap()
+        {
+            PluginManager pluginManager = new PluginManager();
+            Type type = pluginManager.GetPluginTypeFromPath("NaviPlugin");
+            IPlugin plugin = Activator.CreateInstance(type, new object[] { false }) as IPlugin;
+            return plugin;
+        }
+
+        public string GetPluginDirectory()
+        {
+            return "/plugins";
+        }
+
+        public IPluginManager GetPluginManager()
+        {
+            return new PluginManager();
+        }
     }
 }

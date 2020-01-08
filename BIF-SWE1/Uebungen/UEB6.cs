@@ -57,7 +57,15 @@ namespace Uebungen
 
         public string GetToLowerUrl()
         {
-            return "/tolower.html";
+            return "/lower.html";
+        }
+
+        public IPlugin GetNavigationPluginWithoutLoadingMap()
+        {
+            PluginManager pluginManager = new PluginManager();
+            Type type = pluginManager.GetPluginTypeFromPath("NaviPlugin");
+            IPlugin plugin = Activator.CreateInstance(type, new object[] { false }) as IPlugin;
+            return plugin;
         }
     }
 }

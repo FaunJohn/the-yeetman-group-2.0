@@ -36,7 +36,7 @@ namespace NaviPlugin
             if (req == null)
                 return 0.0f;
 
-            if (req.IsValid && req.Url.Segments[0].ToLower().Equals("navi"))
+            if (req.IsValid && req.Url.Segments[0].ToLower().Equals("navi") || (req.IsValid && req.Url.Segments[0].ToLower() == "navi.html"))
             {
                 return 1.0f;
             }
@@ -62,7 +62,7 @@ namespace NaviPlugin
         {
             if (req == null) return new Response { StatusCode = 404 };
 
-            if (req.IsValid && req.Url.Segments.Length == 2 && req.Url.Segments[0].ToLower() == "navi" && req.Url.Segments[1].ToLower() == "reload")
+            if ((req.IsValid && req.Url.Segments.Length == 2 && req.Url.Segments[0].ToLower() == "navi" && req.Url.Segments[1].ToLower() == "reload") || (req.IsValid && req.Url.Segments.Length == 2 && req.Url.Segments[0].ToLower() == "navi.html" && req.Url.Segments[1].ToLower() == "reload"))
             {
                 if(mapDataLoadingCheck)
                 {
@@ -75,7 +75,7 @@ namespace NaviPlugin
                 return new Response { StatusCode = 200 };
             }
             // A post request with the navi segment requests map data as json
-            else if (req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "navi" && req.Method == "POST")
+            else if ((req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "navi" && req.Method == "POST") ||(req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "navi.html" && req.Method == "POST"))
             {
                 return GetNavi(req);
             }
@@ -154,7 +154,7 @@ namespace NaviPlugin
             {
                 if (element.NodeType == XmlNodeType.Element && element.Name == "tag")
                 {
-                    //ReadTag()
+                    //Read the tags
                     string tagType = element.GetAttribute("k");
                     string value = element.GetAttribute("v");
 
@@ -193,7 +193,7 @@ namespace NaviPlugin
         }
 
         /// <summary>
-        /// Creates a response containif the requested map data as json
+        /// Creates a response containing the requested map data as json
         /// </summary>
         /// <param name="req">Request</param>
         /// <returns>valid response</returns>
@@ -230,5 +230,19 @@ namespace NaviPlugin
             resp.ContentType = resp.KnownFileExtensions["json"] ?? "text/plain";
             return resp;
         }
+
+        /// <summary>
+        /// Loads the default map file in a separate thread if flag is set.
+        /// Starts processing requests once the map file is loaded.
+        /// </summary>
+        /// <param name="loadMap"></param>
+        public NaviPlugin(bool loadMap = true)
+        {
+            if (loadMap)
+            {
+                StartLoadingMapData();
+            }
+        }
+
     }
 }

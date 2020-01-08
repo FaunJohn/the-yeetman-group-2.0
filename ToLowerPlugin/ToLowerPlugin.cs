@@ -51,7 +51,7 @@ namespace ToLowerPlugin
             }
 
             // returns lower case request content string
-            else if (req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "tolower" && req.Method == "POST")
+            else if (req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "tolower" && req.Method == "POST" || req.IsValid && req.Url.Segments.Length == 1 && req.Url.Segments[0].ToLower() == "lower.html" && req.Method == "POST")
             {
                 Response response = new Response { StatusCode = 200 };
                 response.SetContent(req.ContentString.ToLower());

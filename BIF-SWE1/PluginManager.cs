@@ -164,5 +164,40 @@ namespace BIF_SWE1.Uebungen
         {
             Plugins = new List<IPlugin>();
         }
+
+        /// <summary>
+        /// Looks for an assembly with the specified name (within configured plugins directory).
+        /// Then returns the first type that implements IPlugin.
+        /// (An assembly should only contain one plugin)
+        /// </summary>
+        /// <param name="pluginName">Plugin name (name of the assembly)</param>
+        /// <returns>
+        ///     Plugin found: First plugin type that was found in the assembly
+        ///     No Plugin found: null
+        /// </returns>
+        public Type GetPluginTypeFromPath(string pluginName)
+        {
+            string pluginPath = "plugins/" + pluginName + ".dll";
+
+            // Try to load assembly from specified dll within plugins folder
+            Assembly assembly = LoadPlugin(pluginPath);
+            if (assembly != null) // A dll could be loaded
+            {
+                // Get all types that implement IPlugin in the assembly
+                // Loop over types in the assembly
+                foreach (Type type in assembly.GetTypes())
+                {
+                    // The plugin implements/is assignable to IPlugin
+                    if (typeof(IPlugin).IsAssignableFrom(type))
+                    {
+                        return type;
+                    }
+                }
+            }
+
+            // No plugin found
+            return null;
+        }
+
     }
 }
