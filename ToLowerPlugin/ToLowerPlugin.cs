@@ -5,12 +5,13 @@ using BIF_SWE1;
 using BIF_SWE1.Uebungen;
 
 namespace ToLowerPlugin
-{
+{        
+    /// <summary>
+    /// Allows the user to enter text and get the lowercase variant of the entered text.
+    /// </summary>
     public class ToLowerPlugin : IPlugin, IPluginName
     {
-        /// <summary>
-        /// Allows the user to enter text and get the lowercase variant of the entered text.
-        /// </summary>
+
         public string Name { get; } = "ToLowerPlugin";
 
         /// <summary>

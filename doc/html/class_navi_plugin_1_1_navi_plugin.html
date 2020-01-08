@@ -110,6 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a57a1462a99e4458186df36516d4fa1e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_navi_plugin_1_1_navi_plugin.html#a57a1462a99e4458186df36516d4fa1e8">ReadAnyOsmElement</a> (XmlReader osm)</td></tr>
 <tr class="memdesc:a57a1462a99e4458186df36516d4fa1e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an osm element into an adress class instance  <a href="class_navi_plugin_1_1_navi_plugin.html#a57a1462a99e4458186df36516d4fa1e8">More...</a><br /></td></tr>
 <tr class="separator:a57a1462a99e4458186df36516d4fa1e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a46927bf89213fa7354cda3f014a36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_navi_plugin_1_1_navi_plugin.html#a70a46927bf89213fa7354cda3f014a36">NaviPlugin</a> (bool loadMap=true)</td></tr>
+<tr class="memdesc:a70a46927bf89213fa7354cda3f014a36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the default map file in a separate thread if flag is set. Starts processing requests once the map file is loaded.  <a href="class_navi_plugin_1_1_navi_plugin.html#a70a46927bf89213fa7354cda3f014a36">More...</a><br /></td></tr>
+<tr class="separator:a70a46927bf89213fa7354cda3f014a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -125,7 +128,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b><code> [get
 <div class="textblock"><p>Navi class plugin A user enters a street name and the plugin finds all cities in which the street is available </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a78496534f6e4b6675957b85e5acc863f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78496534f6e4b6675957b85e5acc863f">&#9670;&nbsp;</a></span>NaviPlugin()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a78496534f6e4b6675957b85e5acc863f">&#9670;&nbsp;</a></span>NaviPlugin() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,6 +143,32 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>Name</b><code> [get
 </div><div class="memdoc">
 
 <p>Starts loading map data from .osm file if initialized </p>
+
+</div>
+</div>
+<a id="a70a46927bf89213fa7354cda3f014a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a46927bf89213fa7354cda3f014a36">&#9670;&nbsp;</a></span>NaviPlugin() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NaviPlugin.NaviPlugin.NaviPlugin </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loadMap</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads the default map file in a separate thread if flag is set. Starts processing requests once the map file is loaded. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">loadMap</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

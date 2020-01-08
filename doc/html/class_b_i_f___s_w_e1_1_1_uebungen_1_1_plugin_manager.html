@@ -106,6 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab21901ca125e0de6c25ad7ac7ba45a38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#ab21901ca125e0de6c25ad7ac7ba45a38">Clear</a> ()</td></tr>
 <tr class="memdesc:ab21901ca125e0de6c25ad7ac7ba45a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears plugin list  <a href="class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#ab21901ca125e0de6c25ad7ac7ba45a38">More...</a><br /></td></tr>
 <tr class="separator:ab21901ca125e0de6c25ad7ac7ba45a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae462837cade01d63681982c3a56e1f8"><td class="memItemLeft" align="right" valign="top">Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#aae462837cade01d63681982c3a56e1f8">GetPluginTypeFromPath</a> (string pluginName)</td></tr>
+<tr class="memdesc:aae462837cade01d63681982c3a56e1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Looks for an assembly with the specified name (within configured plugins directory). Then returns the first type that implements IPlugin. (An assembly should only contain one plugin)  <a href="class_b_i_f___s_w_e1_1_1_uebungen_1_1_plugin_manager.html#aae462837cade01d63681982c3a56e1f8">More...</a><br /></td></tr>
+<tr class="separator:aae462837cade01d63681982c3a56e1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -248,6 +251,33 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>First Plugin found in the assembly or null</dd></dl>
+
+</div>
+</div>
+<a id="aae462837cade01d63681982c3a56e1f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae462837cade01d63681982c3a56e1f8">&#9670;&nbsp;</a></span>GetPluginTypeFromPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Type BIF_SWE1.Uebungen.PluginManager.GetPluginTypeFromPath </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>pluginName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Looks for an assembly with the specified name (within configured plugins directory). Then returns the first type that implements IPlugin. (An assembly should only contain one plugin) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pluginName</td><td>Plugin name (name of the assembly)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Plugin found: First plugin type that was found in the assembly No Plugin found: null </dd></dl>
 
 </div>
 </div>

@@ -6,11 +6,11 @@ using System.IO;
 
 namespace SFP
 {
+    /// <summary>
+    /// A plugin for loading static files from the webserver
+    /// </summary>
     public class StaticFilePlugin : IPlugin, IPluginName
     {
-        /// <summary>
-        /// A plugin for loading static files from the webserver
-        /// </summary>
         public string Name { get; } = "StaticFilePlugin";
 
         /// <summary>
