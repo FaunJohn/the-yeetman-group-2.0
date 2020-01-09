@@ -31,6 +31,7 @@ namespace BIF_SWE1
         public void Listen()
         {
             Console.WriteLine("Starting Server...");
+            // Listens for connections from TCP network clients
             TcpListener tcpListener = new TcpListener(IPAddress.Any, Port);
             Console.WriteLine("Listening on Port " + Port);
             tcpListener.Start();
@@ -38,7 +39,7 @@ namespace BIF_SWE1
             while(true)
             {
                 Socket s = tcpListener.AcceptSocket();
-                Thread thread = new Thread(()=> ProcessRequest(s));
+                Thread thread = new Thread(()=> ProcessRequest(s)); // multiuser fähig
                 thread.Start();
             }
         }

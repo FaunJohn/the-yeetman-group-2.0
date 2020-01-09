@@ -113,7 +113,7 @@ namespace BIF.SWE1.UnitTests
         }
 
         [Test]
-        public void temp_plugin_return_not_found()
+        public void lower_plugin_return_not_found()
         {
             var ueb = CreateInstance();
             var plugin = ueb.GetToLowerPlugin();

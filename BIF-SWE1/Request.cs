@@ -45,10 +45,9 @@ namespace BIF_SWE1.Uebungen
             else
             {
                 Console.WriteLine("Begin");
-                Console.WriteLine(requestLine);
+                Console.WriteLine(requestLine); // should look like this: GET /favicon.ico HTTP/1.1
                 Console.WriteLine("END");
 
-                // should look like this: GET /favicon.ico HTTP/1.1
                 string[] requestArr;
                 requestArr = requestLine.Split(' ');
                 // length has to be 3
@@ -102,9 +101,7 @@ namespace BIF_SWE1.Uebungen
                     }
                     Headers.Add(headerLine[0].ToLower(), headerLine[1]);
                 }
-                // maybe throw an exception?
             }
-            // stream not writable?
             ReqStreamReader.Close();
 
         }
@@ -163,8 +160,10 @@ namespace BIF_SWE1.Uebungen
 
                 sw.Write(Content);
 
+                // Clears all buffers for the current writer and causes any buffered data to be written to the underlying stream.
                 sw.Flush();
 
+                // Set the position to the beginning of the stream.
                 ms.Seek(0, SeekOrigin.Begin);
                 return ms;
             }

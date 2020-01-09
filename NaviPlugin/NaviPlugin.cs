@@ -171,7 +171,6 @@ namespace NaviPlugin
                             break;
                     }
                 }
-
             }
 
             if (address.Street != null && address.City != null)

@@ -53,9 +53,10 @@ namespace BIF_SWE1.Uebungen
                 if (Directory.Exists(PluginPath))
                 {
                     string[] files = Directory.GetFiles(PluginPath, "*.dll");
-                    // selectMany() -> create a single sewuence from a sequence in which all of the elements are seperate
+                    // selectMany() -> create a single sequence from a sequence in which all of the elements are seperate
                     IEnumerable<IPlugin> allPlugins = files.SelectMany(singlePath =>
                     {
+                        // gets all plugin assemblys
                         Assembly assemblyPlugins = LoadPlugin(singlePath);
                         return CreateAllPlugins(assemblyPlugins);
                     }).ToList();
@@ -70,7 +71,8 @@ namespace BIF_SWE1.Uebungen
         }
 
         /// <summary>
-        /// Searches for a plugin with the specified name an loads the types which implement the Plugin (IPlugin) and returns the first one
+        /// Unit Test function
+        /// Searches for a plugin with the specified name and loads the types which implement the Plugin (IPlugin) and returns the first one
         /// The assembly should  only contain one specific Plugin
         /// </summary>
         /// <param name="pluginName">Name of the Plugin/Assembly</param>
@@ -100,6 +102,7 @@ namespace BIF_SWE1.Uebungen
         /// <returns>Assembly or null</returns>
         static Assembly LoadPlugin(string pluginPath)
         {
+            // An assembly is the compiled output of your code, typically a DLL. It's the smallest unit of deployment for any .NET project.
             PluginLoadContext loadContext = new PluginLoadContext(pluginPath);
             
             // check if file is available/exists
@@ -120,7 +123,7 @@ namespace BIF_SWE1.Uebungen
         /// <returns>Enumerable of plugins</returns>
         static IEnumerable<IPlugin> CreateAllPlugins(Assembly pluginAssembly)
         {
-            // getTypes() returns all types which are defines in this assembly
+            // getTypes() returns all types which are defined in this assembly
             foreach (Type type in pluginAssembly.GetTypes())
             {
                 // IsAssignableFrom() -> Determines whether an instance of a specified type can be assigned to a variable of the current type.
@@ -166,6 +169,7 @@ namespace BIF_SWE1.Uebungen
         }
 
         /// <summary>
+        /// HELPER FUNCTION FOR UNIT TESTS
         /// Looks for an assembly with the specified name (within configured plugins directory).
         /// Then returns the first type that implements IPlugin.
         /// (An assembly should only contain one plugin)

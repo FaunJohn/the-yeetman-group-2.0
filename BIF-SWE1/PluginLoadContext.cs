@@ -11,6 +11,13 @@ namespace BIF_SWE1
     /// </summary>
     class PluginLoadContext : AssemblyLoadContext
     {
+        /// <summary>
+        /// The AssemblyLoadContext exists primarily to provide assembly loading isolation. It allows multiple versions of the same assembly to be loaded within a single process. 
+        /// Represents the runtime's concept of a scope for assembly loading.
+        /// Every .NET Core application implicitly uses the AssemblyLoadContext. It's the runtime's provider for locating and loading dependencies. Whenever a dependency is loaded, an AssemblyLoadContext instance is invoked to locate it.
+        /// It provides a service of locating, loading, and caching managed assemblies and other dependencies.
+        /// To support dynamic code loading and unloading, it creates an isolated context for loading code and its dependencies in their own AssemblyLoadContext instance.
+        /// </summary>
         private AssemblyDependencyResolver _resolver;
 
         /// <summary>
@@ -36,17 +43,6 @@ namespace BIF_SWE1
             }
 
             return null;
-        }
-
-        protected override IntPtr LoadUnmanagedDll(string unmanagedDllName)
-        {
-            string libraryPath = _resolver.ResolveUnmanagedDllToPath(unmanagedDllName);
-            if (libraryPath != null)
-            {
-                return LoadUnmanagedDllFromPath(libraryPath);
-            }
-
-            return IntPtr.Zero;
         }
     }
 }

@@ -32,8 +32,16 @@ namespace BIF_SWE1.Uebungen
         /// </summary>
         public IDictionary<string, string> KnownFileExtensions = new Dictionary<string, string>()
         {
-            {"html", "text/html"}, {"css", "text/css"}, {"", "text/plain"}, {"js", "text/javascript"}, 
-            {"gif", "image/gif"}, {"jpeg", "image/jpeg"}, {"jpg", "image/jpeg"}, {"png", "image/png"}, {"txt", "text/plain"}, { "json", "text/json"}
+            {"html", "text/html"},
+            {"css", "text/css"},
+            {"", "text/plain"},
+            {"js", "text/javascript"},
+            {"gif", "image/gif"},
+            {"jpeg", "image/jpeg"},
+            {"jpg", "image/jpeg"},
+            {"png", "image/png"},
+            {"txt", "text/plain"},
+            { "json", "text/json"}
         };
 
         /// <summary>
@@ -134,7 +142,6 @@ namespace BIF_SWE1.Uebungen
         /// <param name="network">Network Stream</param>
         public void Send(Stream network)
         {
-            // TODO: rework
             if (String.IsNullOrEmpty(Content) && !String.IsNullOrEmpty(ContentType))
                 throw new Exception("Expected non-empty body when content-type is set, got empty body.");
 
